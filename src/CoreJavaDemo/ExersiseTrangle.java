@@ -14,6 +14,7 @@ public class ExersiseTrangle {
 		int side2 = scanner.nextInt();
 		System.out.print("Side 3: ");
 		int side3 = scanner.nextInt();
+		
 
 		// Determine triangle type
 		if (side1 == side2 && side2 == side3) {
