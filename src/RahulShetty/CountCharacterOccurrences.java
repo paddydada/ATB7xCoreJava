@@ -15,7 +15,7 @@ public class CountCharacterOccurrences {
 		// Print the character counts
 		System.out.println("Character counts in the string:");
 		for (Map.Entry<Character, Integer> entry : characterCountMap.entrySet()) {
-			System.out.println(entry.getKey() + ": " + entry.getValue());
+			System.out.print(entry.getKey() + ": " + entry.getValue() + "    ");
 		}
 	}
 

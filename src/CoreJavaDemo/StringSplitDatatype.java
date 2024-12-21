@@ -21,7 +21,7 @@ public class StringSplitDatatype {
 		System.out.println("upperCase: " + upperCase);
 
 		// Remove all alphanumeric characters
-		String specialChars = a.replaceAll("[^a-zA-Z0-9]", "");
+		String specialChars = a.replaceAll("[a-zA-Z0-9]", "");
 		System.out.println("special characters: " + specialChars);
 	}
 

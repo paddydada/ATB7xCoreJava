@@ -20,7 +20,7 @@ public class SecondMax {
 		}
 
 		// Check if secondMax was updated
-		if (secondMax != Integer.MIN_VALUE) {
+		if (secondMax != max) {
 			System.out.println("The second maximum value is: " + secondMax);
 		} else {
 			System.out.println("There is no second maximum value.");

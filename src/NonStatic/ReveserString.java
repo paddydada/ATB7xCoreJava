@@ -1,10 +1,8 @@
 package NonStatic;
 
 public class ReveserString {
-
 	// create Non static method with String return type and 0 args
 	// write logic to return reverse the String
-
 	public String reverse(String input) {
 
 		String rev = "";
@@ -22,7 +20,6 @@ public class ReveserString {
 		ReveserString rs = new ReveserString();
 		String input = "pravin";
 		String result = rs.reverse(input);
-
 		System.out.println(input + "  " + result);
 	}
 }

@@ -1,34 +1,46 @@
 package CoreJavaDemo;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Anagam {
 
-	public static boolean isAnagram(String str1, String str2) {
-		// If lengths are not the same, they cannot be anagrams
-		if (str1.length() != str2.length()) {
-			return false;
-		}
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read input strings
+        String str1 = scanner.nextLine();
+        String str2 = scanner.nextLine();
+        
+        // Check if the strings are anagrams
+        if (isAnagram(str1, str2)) {
+            System.out.println("Anagrams");
+        } else {
+            System.out.println("Not Anagrams");
+        }
+        
+        scanner.close();
+    }
 
-		char[] arr1 = str1.toCharArray();
-		char[] arr2 = str2.toCharArray();
+    private static boolean isAnagram(String a, String b) {
+        // Normalize the strings to lower case
+        a = a.toLowerCase();
+        b = b.toLowerCase();
 
-		Arrays.sort(arr1);
-		Arrays.sort(arr2);
+        // If lengths are not the same, they cannot be anagrams
+        if (a.length() != b.length()) {
+            return false;
+        }
 
-		// Check if sorted arrays are equal
-		return Arrays.equals(arr1, arr2);
+        // Convert strings to character arrays
+        char[] aCharArray = a.toCharArray();
+        char[] bCharArray = b.toCharArray();
 
-	}
+        // Sort the character arrays
+        Arrays.sort(aCharArray);
+        Arrays.sort(bCharArray);
 
-	public static void main(String[] args) {
-		String str1 = "listen";
-		String str2 = "silent";
-
-		if (isAnagram(str1, str2)) {
-			System.out.println(str1 + " and " + str2 + " are anagrams.");
-		} else {
-			System.out.println(str1 + " and " + str2 + " are not anagrams.");
-		}
-	}
+        // Compare sorted arrays
+        return Arrays.equals(aCharArray, bCharArray);
+    }
 }
