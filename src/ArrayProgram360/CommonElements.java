@@ -2,6 +2,7 @@ package ArrayProgram360;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class CommonElements {
@@ -15,6 +16,7 @@ public class CommonElements {
 		List<String> commonElements = new ArrayList<>(list1);
 
 		commonElements.retainAll(list2);
+		Collections.sort(commonElements);
 
 		System.out.println(commonElements);
 	}
