@@ -15,7 +15,6 @@ public class ExersiseTrangle {
 		System.out.print("Side 3: ");
 		int side3 = scanner.nextInt();
 		
-
 		// Determine triangle type
 		if (side1 == side2 && side2 == side3) {
 			// All sides are equal - 5 5 5
